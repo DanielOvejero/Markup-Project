@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+
+    <settings>
+        <networks>
+            <wifi>
+                <activeornot active="yes">
+                    1
+                </activeornot>
+                <savednets>
+                    <net1 id="net_1"/>
+                    <net2 id="net_2"/>
+                    <net3 id="net_3"/>
+                    <net4 id="net_4"/>
+                    <net5 id="net_5"/>
+                </savednets>
+                <advancedAdjustments>
+                    <macID macid="c4:0b:cb:7c:4d:04"/>
+                    <IPaddress ip="135.24.25.25"/>
+                </advancedAdjustments>
+            </wifi>
+            <bluetooth active="no">
+                Bluetooth network, initially disactivated. 
+            </bluetooth>
+            <VPN>
+                VPN can transfer internet to another device when activated.
+            </VPN>
+            <data>
+                The data is the wireless connection from your phone.
+            </data>
+        </networks>
+        <personal>
+            <screen>
+                <bright value="56"/>
+                <resolution valueh="1253" valuev="256"/>
+            </screen>
+            <soundandvibration>
+                <activatedSound active="yes">Click to disactivate</activatedSound>
+                <activatedVibration active="no">Initial state not activated</activatedVibration>
+            </soundandvibration>
+        </personal>
+        <systemanddevice>
+            <blockingandfingerprint>
+                <fingerprintINFO>The fingerprint info has the information of the user's fingerprint and therefore can use it for
+                blocking and unblocking the phone whenever this user touches the designated area for it.</fingerprintINFO>
+                <blockingPatron>The blocking patron is a series of points that have to be combined to unblock the phone, only the user
+                is supposed to know everything about this patron.</blockingPatron>
+            </blockingandfingerprint>
+            <notificationsandstate>
+                <appsnotifications>Apps can have its notifications activated or disactivated.</appsnotifications>
+                <changepositions>Apps can change the position of the notifications</changepositions>
+            </notificationsandstate>
+            <backgroundprocessing>Some apps will be working in background, that means that they will not consume as many resources as the rest 
+            of the programmes but they'll be active regularly.</backgroundprocessing>
+            <nodisturb active="yes" starthour="23" finishhour="07">This is the time when the notifications don't make
+            any noise when they're recived because of night time.</nodisturb>
+            <battery>
+                <lowconsumptionmode active="yes" startunder="15">The lowconsumption mode will turn down the brightness
+                of the screen and will update less frequently the running apps.</lowconsumptionmode>
+                <battery-use>Shows the use of battery by the different apps that are being run.</battery-use>
+            </battery>
+            <storage>
+                <apps-data>Keeps track of the storage that the apps occupy.</apps-data>
+                <pictures-videos>Shows the amount of storage occupied by the pictures and videos that are in the phone.</pictures-videos>
+                <audio>Holds information about the amount of audio that we're keeping.</audio>
+                <others>There are other apps that might need their occupation.</others>
+            </storage>
+            <simplifiedmode active="no">When we activate it it shows a smaller screen.</simplifiedmode>
+        </systemanddevice>
+        <myaccounts>
+            <myaccount>Account we're logged in.</myaccount>
+            <otheraccounts>Other accounts we might have.</otheraccounts>
+            <google>Google account.</google>
+            <syncronize>Re-sycronize with the apps.</syncronize>
+        </myaccounts>
+        <adjustments>
+            <systemapps>Apps in the system.</systemapps>
+            <installedapps>Installed Apps.</installedapps>
+            <dualapps>Apps in thesystem and another device.</dualapps>
+            <permits>Manage permits in the apps.</permits>
+            <blockingapps>Block apps.</blockingapps>
+        </adjustments>
+        <information>Information about the phone.</information>
+    </settings>
+    
+    
+

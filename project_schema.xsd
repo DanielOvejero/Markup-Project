@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <!-- Here they are all elements with their attributes -->
+    <xs:element name="activeornot"/>
+    <xs:element name="savednets"/>
+    <xs:elemet name="advancedadjustments"/>
+    <xs:element name="settings">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="networks">
+                    <xs:complexType>
+                        <xs:element name="wifi">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="activeornot">
+                                        <xs:extension base="string">
+                                            <xs:attribute name="active" type="boolean"/>
+                                        </xs:extension> 
+                                    </xs:element>
+                                    <xs:element name="savednets">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="net1">
+                                                    <xs:attribute name="id" type="xs:string"/>
+                                                </xs:element>
+                                                <xs:element name="net2">
+                                                    <xs:attribute name="id" type="xs:string"/>
+                                                </xs:element>
+                                                <xs:element name="net3">
+                                                    <xs:attribute name="id" type="xs:string"/>
+                                                </xs:element>
+                                                <xs:element name="net4">
+                                                    <xs:attribute name="id" type="xs:string"/>
+                                                </xs:element>
+                                                <xs:element name="net5">
+                                                    <xs:attribute name="id" type="xs:string"/>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="advancedAdjustments">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="macID">
+                                                    <xs:attribute name="macid" type="xs:string"/>
+                                                </xs:element>
+                                                <xs:element name="IPaddress">
+                                                    <xs:attribute name="ip" type="xs:string"/>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="bluetooth">
+                            <xs:complexType>
+                            <xs:attribute name="active" type="boolean"/>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="VPN"/>
+                        <xs:element name="data"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="personal">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="screen">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="bright">
+                                            <xs:complexType>
+                                                <xs:attribute name="value" type="xs:integer"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="resolution">
+                                            <xs:complexType>
+                                                <xs:attribute name="valueh" type="xs:integer"/>
+                                                <xs:attribute name="valuev" type="xs:integer"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="soundandvibration">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="activatedsound">
+                                            <xs:complexType>
+                                                <xs:attribute name="active" type="xs:boolean"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="activatedvibration">
+                                            <xs:complexType>
+                                                <xs:attribute name="active" type="xs:boolean"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="systemanddevice">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="blockingandfingerprint">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fingerprintINFO"/>
+                                        <xs:element name="blockingPatron"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="notificationandstate">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="appsnotifications"/>
+                                        <xs:element name="changepositions"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="backgroundprocessing"/>
+                            <xs:element name="nodisturb">
+                                <xs:complexType>
+                                    <xs:attribute name="active" type="xs:boolean"/>
+                                    <xs:attribute name="starthour" type="xs:integer"/>
+                                    <xs:attribute name="finishhour" type="xs:integer"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="battery">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="lowconsumptionmode">
+                                            <xs:complexType>
+                                                <xs:attribute name="active" type="xs:boolean"/>
+                                                <xs:attribute name="startunder" type="xs:integer"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="battery-use"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="storage">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="apps-data"/>
+                                        <xs:element name="pictures-video"/>
+                                        <xs:element name="audio"/>
+                                        <xs:element name="others"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="simplifiedmode">
+                                <xs:complexType>
+                                    <xs:attribute name="active" type="xs:boolean"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="myaccounts">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="myaccount"/>
+                            <xs:element name="otheraccounts"/>
+                            <xs:element name="google"/>
+                            <xs:element name="syncronize"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="adjustments">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="systemapps"/>
+                            <xs:element name="installedapps"/>
+                            <xs:element name="dualapps"/>
+                            <xs:element name="permits"/>
+                            <xs:element name="blockingapps"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="information"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    
+
+</xs:schema>
